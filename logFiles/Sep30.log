@@ -1,0 +1,2 @@
+2021-09-30 21:46:44:	{InstitutionID: ServiceName: LogType: Data:{PublishTime:2021-09-30 21:46:44 LogLevel:info TraceID: ActionTo: ActionName: EndPoint: ErrorDesc: FileName:sfa/Login.go-- line : 46 AdditionalData: RequestBody: RequestHeader: ResponseBody: ResponseHeader: ResponseId:}}
+2021-09-30 21:46:44:	{InstitutionID: ServiceName: LogType: Data:{PublishTime:2021-09-30 21:46:44 LogLevel:info TraceID: ActionTo: ActionName: EndPoint: ErrorDesc: FileName:sfa/Login.go-- line : 52 AdditionalData: RequestBody: RequestHeader: ResponseBody: ResponseHeader: ResponseId:}}

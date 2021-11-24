@@ -1,0 +1,4284 @@
+definitions:
+  dbmodels.Acquisitions:
+    properties:
+      business_types:
+        type: string
+      id:
+        type: integer
+      logo:
+        type: string
+      name:
+        type: string
+      register_using_id:
+        type: string
+      rose_merchant_category:
+        type: string
+      rose_merchant_group:
+        type: string
+    type: object
+  dbmodels.ActionMerchants:
+    properties:
+      action_merchant_id:
+        type: integer
+      action_merchant_name:
+        type: string
+      created_at:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.CallPlanActions:
+    properties:
+      action:
+        type: string
+      action_type:
+        type: string
+      amount:
+        type: number
+      call_plan_merchant_id:
+        type: integer
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      merchant_action:
+        type: string
+      name:
+        type: string
+      note:
+        type: string
+      product:
+        type: string
+      reason:
+        type: string
+      result:
+        type: boolean
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.CallPlanDescriptions:
+    properties:
+      action_merchant_id:
+        type: integer
+      created_at:
+        type: string
+      description:
+        type: string
+      description_id:
+        type: integer
+      product_merchant_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  dbmodels.Cities:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  dbmodels.Districts:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  dbmodels.MerchantBusinessTypes:
+    properties:
+      code:
+        type: string
+      name:
+        type: string
+    type: object
+  dbmodels.ProductMerchants:
+    properties:
+      created_at:
+        type: string
+      product_merchant_id:
+        type: integer
+      product_merchant_name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.Provinces:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  dbmodels.SalesType:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  dbmodels.Villages:
+    properties:
+      created_at:
+        description: SubAreas            []SubArea `gorm:"many2many:sub_areas_villages;"`
+        type: string
+      district_id:
+        type: integer
+      id:
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+      village_code:
+        description: "CityId\t\t\tint8\t`gorm:\"column:city_id\" json:\"city_id\"`\nDistrictCode\tstring\t`gorm:\"column:district_code\" json:\"district_code\"`"
+        type: string
+    type: object
+  models.AcquisitionsMerchantDetailReq:
+    properties:
+      merchant_phone:
+        type: string
+    type: object
+  models.AcquisitionsMerchantDetailRes:
+    properties:
+      acquitision_date:
+        type: string
+      agent_company_id:
+        type: string
+      agent_id:
+        type: string
+      agent_name:
+        type: string
+      agent_phone_number:
+        type: string
+      category:
+        type: string
+      device_brand:
+        type: string
+      device_group:
+        type: string
+      device_type:
+        type: string
+      existing_qr_value:
+        type: string
+      foto_preprinted:
+        type: string
+      institution_id:
+        type: string
+      kategori_bisnis:
+        type: string
+      level:
+        type: string
+      merchant_group_name:
+        type: string
+      merchant_outlet_id:
+        type: string
+      merchant_pan:
+        type: string
+      metode_pembayaran:
+        type: string
+      mpan:
+        type: string
+      nmid:
+        type: string
+      notes:
+        type: string
+      outlet_id:
+        type: string
+      owner_address:
+        type: string
+      owner_firstname:
+        type: string
+      owner_jenis_kelamin:
+        type: string
+      owner_kabupaten_kota:
+        type: string
+      owner_kecamatan:
+        type: string
+      owner_kelurahan:
+        type: string
+      owner_kode_pos:
+        type: string
+      owner_lastname:
+        type: string
+      owner_nama_gadis_ibu_kandung:
+        type: string
+      owner_no_id:
+        type: string
+      owner_no_telf:
+        type: string
+      owner_no_telf_lainnya:
+        type: string
+      owner_pekerjaan:
+        type: string
+      owner_provinsi:
+        type: string
+      owner_rt:
+        type: string
+      owner_rw:
+        type: string
+      owner_tanggal_lahir:
+        type: string
+      owner_tempat_lahir:
+        type: string
+      owner_tgl_expired_id:
+        type: string
+      owner_tipe_id:
+        type: string
+      owner_title:
+        type: string
+      partner_customer_id:
+        type: string
+      patokan:
+        type: string
+      photo_ktp:
+        type: string
+      photo_location:
+        type: string
+      photo_location_2:
+        type: string
+      photo_location_left:
+        type: string
+      photo_location_right:
+        type: string
+      photo_selfie:
+        type: string
+      photo_sign:
+        type: string
+      priority_level:
+        description: "MerchantGroup\t\t    string\t\t`json:\"merchantgroup\"`"
+        type: string
+      sales_id:
+        type: string
+      sr_id:
+        type: string
+      store_alamat:
+        type: string
+      store_jam_operasional:
+        type: string
+      store_jenis_lokasi_bisnis:
+        type: string
+      store_jenis_usaha:
+        type: string
+      store_kabupaten_kota:
+        type: string
+      store_kecamatan:
+        type: string
+      store_kelurahan:
+        type: string
+      store_latitude:
+        type: string
+      store_lokasi_bisnis:
+        type: string
+      store_longitude:
+        type: string
+      store_name:
+        type: string
+      store_name_preprinted:
+        type: string
+      store_phone_number:
+        type: string
+      store_postal_code:
+        type: string
+      store_provinsi:
+        type: string
+      terminal_phone_number:
+        type: string
+      terminal_provider:
+        type: string
+    type: object
+  models.Acquitisions:
+    properties:
+      address:
+        type: string
+      best_visit:
+        type: string
+      business_location:
+        type: string
+      business_type:
+        type: string
+      category_type:
+        type: string
+      city_id:
+        type: string
+      company_code:
+        type: string
+      customer_code:
+        type: string
+      device:
+        type: integer
+      district_id:
+        type: string
+      dob:
+        type: string
+      education:
+        type: boolean
+      id_card:
+        type: string
+      image_id_card:
+        description: images
+        type: string
+      image_merchant:
+        description: images
+        type: string
+      image_merchant_location:
+        description: images
+        type: string
+      image_merchant_location_additional_1:
+        type: string
+      image_merchant_location_additional_2:
+        type: string
+      institution:
+        type: string
+      latitude:
+        type: string
+      lokasi_usaha:
+        type: string
+      longitude:
+        type: string
+      merchant_id:
+        type: string
+      mpan:
+        type: string
+      name:
+        type: string
+      nmid:
+        type: string
+      note:
+        type: string
+      operation_hour:
+        type: string
+      owner_name:
+        type: string
+      phone_number:
+        type: string
+      photo_location_left:
+        type: string
+      photo_location_right:
+        type: string
+      photo_merchant_location:
+        description: images
+        type: string
+      photo_qr_preprinted:
+        type: string
+      province_id:
+        type: string
+      sales;omitempty:
+        type: boolean
+      sales_id:
+        type: integer
+      sales_name:
+        type: string
+      sales_phone:
+        type: string
+      signature:
+        description: images
+        type: string
+      store_name_preprinted:
+        type: string
+      version_id:
+        type: integer
+      village_id:
+        type: string
+    type: object
+  models.AttendancePostReq:
+    properties:
+      attendance_category:
+        type: string
+      attendance_category_type:
+        type: string
+      latitude:
+        type: string
+      location:
+        type: string
+      longitude:
+        type: string
+      notes:
+        type: string
+      photo_accuration:
+        type: string
+      photo_selfie:
+        type: string
+      sales_id:
+        type: integer
+      sales_name:
+        type: string
+      sales_phone:
+        type: string
+      time:
+        type: string
+      type_attendance:
+        type: string
+      type_timezone:
+        type: string
+    type: object
+  models.BusinessTypeListBySRReq:
+    properties:
+      sales_type_id:
+        items:
+          type: integer
+        type: array
+    type: object
+  models.BusinessTypeListRes:
+    properties:
+      tipe_bisnis:
+        items:
+          $ref: '#/definitions/models.DataModule'
+        type: array
+    type: object
+  models.CallPlanActionCheckMerchantPhoneReq:
+    properties:
+      call_plan_merchant_id:
+        type: integer
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_phone:
+        type: string
+    type: object
+  models.CallPlanActionCheckQRISReq:
+    properties:
+      call_plan_merchant_id:
+        type: integer
+      latitude:
+        type: string
+      longitude:
+        type: string
+      qr_content:
+        type: string
+    type: object
+  models.CallPlanActionDeleteReq:
+    properties:
+      call_plan_action_id:
+        type: integer
+    type: object
+  models.CallPlanActionDetailReq:
+    properties:
+      call_plan_action_id:
+        type: integer
+    type: object
+  models.CallPlanActionMerchantUnknownReq:
+    properties:
+      call_plan_merchant_id:
+        type: integer
+      clock_out:
+        type: string
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_status:
+        description: Found - Close / Not Found
+        type: string
+      notes:
+        type: string
+      photo_location:
+        type: string
+      status:
+        description: Completed
+        type: string
+    type: object
+  models.CallPlanActionScanQRReq:
+    properties:
+      qr_content:
+        type: string
+    type: object
+  models.CallPlanActionSubmitReq:
+    properties:
+      call_plan_merchant_id:
+        type: integer
+      merchant_status:
+        type: string
+      notes:
+        type: string
+      status:
+        type: string
+    type: object
+  models.CallPlanActionUpdateClockInMerchantReq:
+    properties:
+      call_plan_merchant_id:
+        type: integer
+    type: object
+  models.CallPlanDescriptionMerchantReq:
+    properties:
+      action_merchant_id:
+        type: integer
+      product_merchant_id:
+        type: integer
+    type: object
+  models.CallPlanListReq:
+    properties:
+      end_date:
+        type: string
+      start_date:
+        type: string
+    type: object
+  models.CallPlanListRes:
+    properties:
+      branch_office_name:
+        type: string
+      call_plan_list:
+        items:
+          $ref: '#/definitions/models.ListCallPlan'
+        type: array
+      date_today:
+        type: string
+      team_leader_name:
+        type: string
+    type: object
+  models.CallPlanMerchantListReq:
+    properties:
+      call_plan_id:
+        type: integer
+      limit:
+        description: "25"
+        type: integer
+      page:
+        type: integer
+      status:
+        description: Incompleted, Completed, Visited
+        type: string
+    type: object
+  models.CallPlanMerchantListRes:
+    properties:
+      amount_action:
+        type: integer
+      amount_action_completed:
+        type: integer
+      call_plan_merchant_id:
+        type: integer
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_address:
+        type: string
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      merchant_status:
+        description: Found - Open, Found - Closed, Not Found
+        type: string
+      merchant_type_name:
+        type: string
+      priority:
+        type: integer
+      todolist_status:
+        type: integer
+    type: object
+  models.CallPlanMerchantListResV24:
+    properties:
+      address_benchmark:
+        type: string
+      amount_action:
+        type: integer
+      amount_action_completed:
+        type: integer
+      call_plan_merchant_id:
+        type: integer
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_address:
+        type: string
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      merchant_status:
+        description: Found - Open, Found - Closed, Not Found
+        type: string
+      merchant_type_name:
+        type: string
+      priority:
+        type: integer
+      sales_type_id:
+        type: integer
+      sales_type_name:
+        type: string
+      todolist_status:
+        type: integer
+    type: object
+  models.CallPlanTodolistListReq:
+    properties:
+      limit:
+        type: integer
+      merchant_phone:
+        type: string
+      page:
+        type: integer
+      status:
+        items:
+          type: string
+        type: array
+    type: object
+  models.CallPlanTodolistListRes:
+    properties:
+      id:
+        type: integer
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_address:
+        type: string
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      name_category:
+        type: string
+      pending_task_date:
+        type: string
+      pendingTaskDate:
+        type: string
+      phone_number:
+        type: string
+      reason:
+        type: string
+      status:
+        type: string
+      task_date:
+        type: string
+      taskDate:
+        type: string
+      village_id:
+        type: integer
+    type: object
+  models.CallPlanTodolistMerchantNotFoundReq:
+    properties:
+      issue:
+        items:
+          type: string
+        type: array
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_id:
+        type: string
+      merchant_image:
+        type: string
+      merchant_phone:
+        type: string
+    type: object
+  models.CallPlanVisitAddReq:
+    properties:
+      action_id:
+        type: integer
+      action_name:
+        type: string
+      action_status:
+        description: Completed
+        type: string
+      action_type:
+        description: Visited
+        type: string
+      amount:
+        type: number
+      call_plan_action_name:
+        description: Call Plan Action
+        type: string
+      call_plan_id:
+        description: Call Plan Merchant
+        type: integer
+      clock_in:
+        description: clock_in
+        type: string
+      description:
+        type: string
+      id_merchant:
+        description: id_merchant
+        type: integer
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_action:
+        type: string
+      merchant_address:
+        type: string
+      merchant_id:
+        description: merchant_id
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      merchant_status:
+        description: Found - Open
+        type: string
+      merchant_type_id:
+        type: integer
+      note:
+        type: string
+      product_id:
+        type: integer
+      product_name:
+        type: string
+      reason:
+        type: string
+      result:
+        type: boolean
+      status:
+        description: Visited
+        type: string
+    type: object
+  models.CallPlanVisitCheckMerchantPhoneReq:
+    properties:
+      merchant_phone:
+        type: string
+    type: object
+  models.CallPlanVisitMerchantRes:
+    properties:
+      clock_in:
+        type: string
+      id_merchant:
+        type: integer
+      merchant_address:
+        type: string
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      merchant_type_id:
+        type: integer
+      merchant_type_name:
+        type: string
+      mpan:
+        type: string
+    type: object
+  models.ChangePhotoPinKTPReq:
+    properties:
+      id_card:
+        type: string
+      new_pin:
+        type: string
+      photo:
+        type: string
+    type: object
+  models.ChangePhotoPinKTPRes:
+    properties:
+      description_code:
+        type: string
+      response_code:
+        type: string
+    type: object
+  models.CheckAccountIndomarcoRes:
+    properties:
+      data:
+        type: object
+      meta:
+        $ref: '#/definitions/models.MetaData'
+        type: object
+    type: object
+  models.CheckIdCardReq:
+    properties:
+      id_card:
+        type: string
+    type: object
+  models.CheckIndomarcoAccountReq:
+    properties:
+      customer_code:
+        type: string
+    type: object
+  models.CheckMerchantOttopayReq:
+    properties:
+      customer_code:
+        type: string
+      id_card:
+        type: string
+      phone:
+        type: string
+    type: object
+  models.CheckProfilSalesRes:
+    properties:
+      area_aquisitions:
+        $ref: '#/definitions/models.ProfileAreaAquisitions'
+        type: object
+      description:
+        type: string
+      description_code:
+        type: string
+      email:
+        type: string
+      phone:
+        type: string
+      photo:
+        type: string
+      position:
+        $ref: '#/definitions/models.ProfilePosition'
+        type: object
+      response_code:
+        type: string
+      sales_id:
+        type: string
+      sales_name:
+        type: string
+      session_token:
+        type: string
+      sfa_id:
+        type: string
+      status:
+        type: string
+      sum_merchant:
+        type: integer
+      sum_verified:
+        type: integer
+    type: object
+  models.CheckQRISReq:
+    properties:
+      qr_content:
+        type: string
+    type: object
+  models.CheckQRISRes:
+    properties:
+      mid:
+        type: string
+      mpan:
+        type: string
+      nmid:
+        type: string
+      store_name_preprinted:
+        type: string
+    type: object
+  models.City:
+    properties:
+      cities:
+        items:
+          $ref: '#/definitions/dbmodels.Cities'
+        type: array
+    type: object
+  models.DataModule:
+    properties:
+      code:
+        type: string
+      name:
+        type: string
+    type: object
+  models.District:
+    properties:
+      districts:
+        items:
+          $ref: '#/definitions/dbmodels.Districts'
+        type: array
+    type: object
+  models.GetAcquisitionByName:
+    properties:
+      name:
+        type: string
+      rose_merchant_category:
+        type: string
+      rose_merchant_group:
+        type: string
+      sales_retail_id:
+        type: string
+    type: object
+  models.GetAcquisitionBySalesTypeID:
+    properties:
+      sales_type_id:
+        type: string
+    type: object
+  models.IndomarcoLoginReq:
+    properties:
+      deviceId:
+        type: string
+      deviceToken:
+        type: string
+      firebase_token:
+        type: string
+      idNumber:
+        type: string
+      pin:
+        type: string
+      role:
+        type: string
+      salesId:
+        type: string
+      version_code:
+        type: string
+    type: object
+  models.IndomarcoLoginRes:
+    properties:
+      description_code:
+        type: string
+      email:
+        type: string
+      force_update:
+        type: boolean
+      functional_id:
+        type: string
+      phone:
+        type: string
+      photo:
+        type: string
+      response_code:
+        type: string
+      sales_id:
+        type: string
+      sales_name:
+        type: string
+      session_token:
+        type: string
+      sfa_id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.ListCallPlan:
+    properties:
+      amount_tasks:
+        type: integer
+      amount_tasks_completed:
+        type: integer
+      call_plan_id:
+        type: integer
+      date:
+        type: string
+      status_date:
+        type: integer
+      village_name:
+        type: string
+    type: object
+  models.LocationsRes:
+    properties:
+      district:
+        type: string
+      village:
+        type: string
+    type: object
+  models.LoginReq:
+    properties:
+      deviceId:
+        type: string
+      deviceToken:
+        type: string
+      firebase_token:
+        type: string
+      phoneNumber:
+        type: string
+      pin:
+        type: string
+      role:
+        type: string
+      salesId:
+        type: string
+      version_code:
+        type: string
+    type: object
+  models.LoginRes:
+    properties:
+      description_code:
+        type: string
+      email:
+        type: string
+      force_update:
+        type: boolean
+      functional_id:
+        type: string
+      phone:
+        type: string
+      photo:
+        type: string
+      response_code:
+        type: string
+      sales_id:
+        type: string
+      sales_name:
+        type: string
+      sales_type:
+        items:
+          $ref: '#/definitions/dbmodels.SalesType'
+        type: array
+      session_token:
+        type: string
+      sfa_id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.LoginV23Res:
+    properties:
+      description_code:
+        type: string
+      email:
+        type: string
+      force_update:
+        type: boolean
+      functional_id:
+        type: string
+      phone:
+        type: string
+      photo:
+        type: string
+      response_code:
+        type: string
+      sales_id:
+        type: string
+      sales_name:
+        type: string
+      sales_type_id:
+        type: integer
+      session_token:
+        type: string
+      sfa_id:
+        type: string
+      status:
+        type: string
+    type: object
+  models.MerchantDetailQRISReq:
+    properties:
+      merchant_phone:
+        type: string
+    type: object
+  models.MerchantDetailQRISRes:
+    properties:
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      mpan:
+        type: string
+    type: object
+  models.MerchantDetailTokoOttopayV23Res:
+    properties:
+      address:
+        type: string
+      city_id:
+        type: integer
+      district_id:
+        type: integer
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      owner_name:
+        type: string
+      province_id:
+        type: integer
+      villager_id:
+        type: integer
+    type: object
+  models.MerchantListReq:
+    properties:
+      city_id:
+        items:
+          type: string
+        type: array
+      district_id:
+        items:
+          type: string
+        type: array
+      keyword:
+        type: string
+      limit:
+        type: integer
+      merchant_category:
+        type: string
+      page:
+        type: integer
+      province_id:
+        description: with filter
+        items:
+          type: string
+        type: array
+      village_id:
+        items:
+          type: string
+        type: array
+    type: object
+  models.MerchantListRes:
+    properties:
+      address:
+        type: string
+      id:
+        type: integer
+      image_merchant:
+        type: string
+      join_at:
+        type: string
+      merchant_category:
+        type: string
+      merchant_id:
+        type: string
+      merchant_status:
+        type: string
+      name:
+        type: string
+      phone_number:
+        type: string
+    type: object
+  models.MetaData:
+    properties:
+      code:
+        example: 200
+        type: integer
+      message:
+        example: Ok
+        type: string
+      status:
+        example: true
+        type: boolean
+    type: object
+  models.ProfileAreaAquisitions:
+    properties:
+      city:
+        type: string
+      locations:
+        items:
+          $ref: '#/definitions/models.LocationsRes'
+        type: array
+      province:
+        type: string
+    type: object
+  models.ProfilePosition:
+    properties:
+      area:
+        type: string
+      area_id:
+        type: string
+      branch:
+        type: string
+      branch_id:
+        type: string
+      branch_office:
+        type: string
+      id:
+        type: string
+      region:
+        type: string
+      region_id:
+        type: string
+      role:
+        type: string
+      role_id:
+        type: string
+      sub_area:
+        type: string
+      sub_area_id:
+        type: string
+    type: object
+  models.Province:
+    properties:
+      provinces:
+        items:
+          $ref: '#/definitions/dbmodels.Provinces'
+        type: array
+    type: object
+  models.ReportBySalesReq:
+    properties:
+      date_from:
+        type: string
+      date_to:
+        type: string
+      phone:
+        type: string
+    type: object
+  models.Response:
+    properties:
+      data:
+        type: object
+      meta:
+        $ref: '#/definitions/models.MetaData'
+        type: object
+    type: object
+  models.ReverseQRRes:
+    properties:
+      nmid:
+        type: string
+    type: object
+  models.ScanAndUpdateQRISReq:
+    properties:
+      merchant_id:
+        type: string
+      merchant_phone:
+        type: string
+      mpan:
+        type: string
+      qr_content:
+        type: string
+    type: object
+  models.TodolistDetailReq:
+    properties:
+      customer_code:
+        example: "543543422556.0"
+        type: string
+      merchant_phone:
+        example: "089898988897"
+        type: string
+      todolist_category_id:
+        example: 5
+        type: integer
+      todolist_id:
+        example: "322"
+        type: string
+    type: object
+  models.TodolistFilterVillageListReq:
+    properties:
+      keyword:
+        type: string
+    type: object
+  models.TodolistListReq:
+    properties:
+      id_category:
+        example:
+        - '[''2'''
+        - '''1'']'
+        items:
+          type: string
+        type: array
+      id_cluster:
+        example:
+        - '[''111111212142'''
+        - '''122214214132'']'
+        items:
+          type: string
+        type: array
+      id_village:
+        example:
+        - '[''111111212142'''
+        - '''122214214132'']'
+        items:
+          type: string
+        type: array
+      keyword:
+        example: "089898988897"
+        type: string
+      limit:
+        type: integer
+      page:
+        type: integer
+      status:
+        example:
+        - '[''Late'''
+        - '''Open'']'
+        items:
+          type: string
+        type: array
+      task_date_end:
+        example: "089898988897"
+        type: string
+      task_date_start:
+        example: "089898988897"
+        type: string
+    type: object
+  models.TodolistMerchantNotFoundListReq:
+    properties:
+      todolist_category_id:
+        type: integer
+    type: object
+  models.TodolistMerchantNotFoundListRes:
+    properties:
+      ID:
+        type: integer
+      created_at:
+        type: string
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.TodolistPostReq:
+    properties:
+      alamat:
+        type: string
+      body:
+        items:
+          type: string
+        type: array
+      city:
+        type: string
+      content_type:
+        items:
+          type: string
+        type: array
+      district:
+        type: string
+      label:
+        items:
+          type: string
+        type: array
+      label_photo_merchant1:
+        type: string
+      label_photo_merchant2:
+        type: string
+      label_photo_merchant3:
+        type: string
+      latitude:
+        type: string
+      latitude_merchant:
+        type: string
+      longitude:
+        type: string
+      longitude_merchant:
+        type: string
+      new_task_date:
+        type: string
+      old_task_date:
+        type: string
+      patokan:
+        type: string
+      photo_merchant1:
+        type: string
+      photo_merchant2:
+        type: string
+      photo_merchant3:
+        type: string
+      province:
+        type: string
+      reason:
+        type: string
+      status:
+        type: string
+      task_id:
+        items:
+          type: integer
+        type: array
+      todolist_id:
+        type: integer
+      versionId:
+        type: integer
+      village:
+        type: string
+    type: object
+  models.TodolistPostV23Req:
+    properties:
+      acquitisions:
+        $ref: '#/definitions/models.Acquitisions'
+        type: object
+      alamat:
+        type: string
+      body:
+        items:
+          type: string
+        type: array
+      city:
+        type: string
+      content_type:
+        items:
+          type: string
+        type: array
+      district:
+        type: string
+      id_merchant:
+        type: integer
+      label:
+        items:
+          type: string
+        type: array
+      label_photo_merchant1:
+        type: string
+      label_photo_merchant2:
+        type: string
+      label_photo_merchant3:
+        type: string
+      latitude:
+        type: string
+      latitude_merchant:
+        type: string
+      longitude:
+        type: string
+      longitude_merchant:
+        type: string
+      new_task_date:
+        type: string
+      old_task_date:
+        type: string
+      patokan:
+        type: string
+      photo_merchant1:
+        type: string
+      photo_merchant2:
+        type: string
+      photo_merchant3:
+        type: string
+      province:
+        type: string
+      reason:
+        type: string
+      status:
+        type: string
+      task_id:
+        items:
+          type: integer
+        type: array
+      todolist_category_id:
+        type: string
+      todolist_id:
+        type: integer
+      versionId:
+        type: integer
+      village:
+        type: string
+    type: object
+  models.TodolistTaskBySubCategoryReq:
+    properties:
+      merchant_phone:
+        type: string
+      sub_category_id:
+        type: string
+      todolist_id:
+        type: string
+    type: object
+  models.UpdateMerchantIndomarcoReq:
+    properties:
+      customer_code:
+        example: "520052170070634329.0"
+        type: string
+      merchant_id:
+        example: OP1B00000041
+        type: string
+      phone:
+        example: "081122330042"
+        type: string
+      rose_merchant_category:
+        example: op
+        type: string
+      rose_merchant_group:
+        example: 74
+        type: integer
+    type: object
+  models.UpdateMerchantReq:
+    properties:
+      address:
+        type: string
+      address_benchmark:
+        type: string
+      best_visit:
+        type: string
+      business_location:
+        description: Jenis Lokasi Bisnis
+        type: string
+      business_type:
+        description: Tipe Bisnis
+        type: string
+      category_type:
+        description: Category Bisnis
+        type: string
+      city_id:
+        type: integer
+      district_id:
+        type: integer
+      dob:
+        description: YYYY-mm-dd
+        type: string
+      id_card:
+        type: string
+      image_id_card:
+        type: string
+      image_merchant:
+        description: Foto Selfie dengan KTP
+        type: string
+      image_merchant_location:
+        description: Foto Pemilik dan Lokasi
+        type: string
+      latitude:
+        type: string
+      longitude:
+        type: string
+      merchant_id:
+        type: string
+      merchant_location:
+        description: Lokasi Bisnis
+        type: integer
+      name:
+        type: string
+      operation_hour:
+        type: string
+      owner_name:
+        type: string
+      phone_number:
+        description: SR Merchant
+        type: string
+      photo_merchant_location:
+        description: Foto Lokasi Bisnis
+        type: string
+      province_id:
+        type: integer
+      signature:
+        type: string
+      village_id:
+        type: integer
+    type: object
+  models.UploadPhotoProfilSalesReq:
+    properties:
+      photo_profil:
+        type: string
+    type: object
+  models.UserCategoryRes:
+    properties:
+      code:
+        type: string
+      logo:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+    type: object
+  models.Village:
+    properties:
+      villages:
+        items:
+          $ref: '#/definitions/dbmodels.Villages'
+        type: array
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /v2.2/acquitisions/merchant/detail:
+    post:
+      consumes:
+      - application/json
+      description: Acquisitions Merchant Detail
+      operationId: AcquisitionsMerchantDetail
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.AcquisitionsMerchantDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Acquisitions Merchant Detail Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.AcquisitionsMerchantDetailRes'
+              type: object
+      summary: Acquisitions Merchant Detail
+      tags:
+      - OTTO SFA
+  /v2.2/business_type/list:
+    get:
+      consumes:
+      - application/json
+      description: Business Type List
+      operationId: Business Type List v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Business Type List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.BusinessTypeListRes'
+              type: object
+      summary: Business Type List
+      tags:
+      - OTTO SFA
+  /v2.2/call_plan/action_merchant/list:
+    get:
+      consumes:
+      - application/json
+      description: CallPlan Action Merchant List
+      operationId: CallPlan Action Merchant List
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.ActionMerchants'
+                  type: array
+              type: object
+      summary: CallPlan Action Merchant List
+      tags:
+      - OTTO SFA
+  /v2.2/call_plan/description_merchant:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Description Merchant
+      operationId: CallPlan Description Merchant
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanDescriptionMerchantReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Description Merchant Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/dbmodels.CallPlanDescriptions'
+              type: object
+      summary: CallPlan Description Merchant
+      tags:
+      - OTTO SFA
+  /v2.2/call_plan/product_merchant/list:
+    get:
+      consumes:
+      - application/json
+      description: CallPlan Product Merchant List
+      operationId: CallPlan Product Merchant List
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Product Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.ProductMerchants'
+                  type: array
+              type: object
+      summary: CallPlan Product Merchant List
+      tags:
+      - OTTO SFA
+  /v2.2/city/:province_id:
+    get:
+      consumes:
+      - application/json
+      description: City
+      operationId: City v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: City Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.City'
+              type: object
+      summary: City
+      tags:
+      - OTTO SFA
+  /v2.2/district/:city_id:
+    get:
+      consumes:
+      - application/json
+      description: District
+      operationId: District
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: District Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.District'
+              type: object
+      summary: District
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/acquitision/dropdown/list:
+    post:
+      consumes:
+      - application/json
+      description: Acquitisions Dropdown List
+      operationId: Acquitisions Dropdown List
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Acquitisions Dropdown List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ReverseQRRes'
+              type: object
+      summary: Acquitisions Dropdown List
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/check_idcard:
+    post:
+      consumes:
+      - application/json
+      description: Check IDCard
+      operationId: Check IDCard v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckIdCardReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Check IDCard Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Check IDCard
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/check_qris:
+    post:
+      consumes:
+      - application/json
+      description: Check QR
+      operationId: Check QR
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Check QR Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CheckQRISRes'
+              type: object
+      summary: Check QR
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/history_summary:
+    post:
+      consumes:
+      - application/json
+      description: ReportHistoryBySales
+      operationId: ReportHistoryBySales V2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ReportBySalesReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Response'
+              type: object
+      summary: ReportHistoryBySales
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/indomarco/check_merchant_ottopay:
+    post:
+      consumes:
+      - application/json
+      description: Indomarco Check Merchant Ottopay
+      operationId: Indomarco Check Merchant Ottopay
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckMerchantOttopayReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Indomarco Check Merchant Ottopay Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Indomarco Check Merchant Ottopay
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/report_by_sales:
+    post:
+      consumes:
+      - application/json
+      description: ReportBySales
+      operationId: ReportBySales V2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ReportBySalesReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Response'
+              type: object
+      summary: ReportBySales
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/reverse_qr:
+    post:
+      consumes:
+      - application/json
+      description: Reverse QR
+      operationId: Reverse QR
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Reverse QR Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ReverseQRRes'
+              type: object
+      summary: Reverse QR
+      tags:
+      - OTTO SFA
+  /v2.2/merchants/update:
+    post:
+      consumes:
+      - application/json
+      description: Update Merchant
+      operationId: Update Merchant
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateMerchantReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Update Merchant Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Update Merchant
+      tags:
+      - OTTO SFA
+  /v2.2/ottosfa/health_check:
+    get:
+      consumes:
+      - application/json
+      description: Health Check
+      operationId: HealthCheck v2.2
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Health Check Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Health Check
+      tags:
+      - OTTO SFA
+  /v2.2/ottosfa/merchants/change_status:
+    post:
+      consumes:
+      - application/json
+      description: Change Status Merchant
+      operationId: Change Status Merchant v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Change Status Merchant Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.District'
+              type: object
+      summary: Change Status Merchant
+      tags:
+      - OTTO SFA
+  /v2.2/province/:country_id:
+    get:
+      consumes:
+      - application/json
+      description: Province
+      operationId: Province
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Province Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Province'
+              type: object
+      summary: Province
+      tags:
+      - OTTO SFA
+  /v2.2/qris/merchant/detail:
+    post:
+      consumes:
+      - application/json
+      description: Merchant Detail QRIS
+      operationId: Merchant List QRIS v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantDetailQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant Detail QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.MerchantDetailQRISRes'
+              type: object
+      summary: Merchant Detail QRIS
+      tags:
+      - OTTO SFA
+  /v2.2/qris/scan:
+    post:
+      consumes:
+      - application/json
+      description: Scan And Update QRIS
+      operationId: Scan And
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ScanAndUpdateQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Scan And Update QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CheckQRISRes'
+              type: object
+      summary: Scan And Update QRIS
+      tags:
+      - OTTO SFA
+  /v2.2/sales/profile:
+    get:
+      consumes:
+      - application/json
+      description: Profile Sales
+      operationId: Profile Sales
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Profile Sales Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CheckProfilSalesRes'
+              type: object
+      summary: Profile Sales
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/attendance/post:
+    post:
+      consumes:
+      - application/json
+      description: Attendance Post
+      operationId: Attendance Post v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.AttendancePostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Post Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ChangePhotoPinKTPRes'
+              type: object
+      summary: Attendance Post
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/auth/change_pin_and_ktp:
+    post:
+      consumes:
+      - application/json
+      description: Change Pin And Id Card Photo Profil
+      operationId: Change Pin And Id Card Photo Profil
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ChangePhotoPinKTPReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Change Pin And Id Card Photo Profil Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ChangePhotoPinKTPRes'
+              type: object
+      summary: Change Pin And Id Card Photo Profil
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Login
+      operationId: Login v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Login Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.LoginRes'
+              type: object
+      summary: Login
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/check_merchant_phone:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Check Merchant Phone
+      operationId: CallPlan Action Check Merchant Phone
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionCheckMerchantPhoneReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Check Merchant Phone Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.CallPlanActions'
+                  type: array
+              type: object
+      summary: CallPlan Action Check Merchant Phone
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/check_qris:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Check QRIS
+      operationId: CallPlan Action Check QRIS
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionCheckQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Check QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.CallPlanActions'
+                  type: array
+              type: object
+      summary: CallPlan Action Check QRIS
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/delete:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Delete
+      operationId: CallPlan Action Delete
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionDeleteReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Delete Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Action Delete
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/detail:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Detail
+      operationId: CallPlan Action Detail v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Detail Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/dbmodels.CallPlanActions'
+              type: object
+      summary: CallPlan Action Detail
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/merchant_unknown:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Merchant Unknown
+      operationId: CallPlan Action Merchant Unknown v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionMerchantUnknownReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Merchant Unknown Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Action Merchant Unknown
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/save:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Save
+      operationId: CallPlan Action Save v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.CallPlanActions'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Save Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.CallPlanActions'
+                  type: array
+              type: object
+      summary: CallPlan Action Save
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/submit:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Submit
+      operationId: CallPlan Action Submit v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionSubmitReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Submit Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Action Submit
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/action/update_clock_in:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Update ClockIn Merchant
+      operationId: CallPlan Action Update ClockIn Merchant
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionUpdateClockInMerchantReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Update ClockIn Merchant Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Action Update ClockIn Merchant
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan List
+      operationId: CallPlan List v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Profile Sales Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanListRes'
+              type: object
+      summary: CallPlan List
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/merchant/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Merchant List
+      operationId: CallPlan Merchant List v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanMerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanMerchantListRes'
+              type: object
+      summary: CallPlan Merchant List
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/todolist/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Todolist List
+      operationId: CallPlan Todolist List v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanTodolistListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Todolist List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanTodolistListRes'
+              type: object
+      summary: CallPlan Todolist List
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/todolist/merchant_not_found:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Todolist Merchant Not Found
+      operationId: CallPlan Todolist Merchant Not Found
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanTodolistMerchantNotFoundReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Todolist Merchant Not Found Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Todolist Merchant Not Found List
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/visit/add:
+    post:
+      consumes:
+      - application/json
+      description: Call Plan Visit Add
+      operationId: Call Plan Visit Add
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanVisitAddReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Call Plan Visit Add Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Call Plan Visit Add
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/visit/check_merchant_phone:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Visit Check Merchant Phone
+      operationId: CallPlan Visit Check Merchant Phone v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanVisitCheckMerchantPhoneReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Visit Check Merchant Phone Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanVisitMerchantRes'
+              type: object
+      summary: CallPlan Visit Check Merchant Phone
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/call_plan/visit/check_qris:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Visit Check QRIS
+      operationId: CallPlan Visit Check QRIS v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Visit Check QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanVisitMerchantRes'
+              type: object
+      summary: CallPlan Visit Check QRIS
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/check_indomarco_account:
+    post:
+      consumes:
+      - application/json
+      description: Check Indomarco Account
+      operationId: Check Indomarco Account
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckIndomarcoAccountReq'
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Check Indomarco Account Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.CheckAccountIndomarcoRes'
+                  type: array
+              type: object
+      summary: Check Indomarco Account
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/clear_session:
+    get:
+      consumes:
+      - application/json
+      description: Clear Session
+      operationId: Clear Session v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Clear Session Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Clear Session
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/indomarco/login:
+    post:
+      consumes:
+      - application/json
+      description: Login Indomarco
+      operationId: Login Indomarco
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.IndomarcoLoginReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Indomarco Login Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.IndomarcoLoginRes'
+              type: object
+      summary: Login Indomarco
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/merchant/list:
+    post:
+      consumes:
+      - application/json
+      description: Merchant List
+      operationId: Merchant List v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.MerchantListRes'
+              type: object
+      summary: Merchant List
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/merchant_not_found/list:
+    post:
+      consumes:
+      - application/json
+      description: Merchant Not Found List
+      operationId: Merchant Not Found List
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant Not Found List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.TodolistMerchantNotFoundListRes'
+                  type: array
+              type: object
+      summary: Merchant Not Found List
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/sales/upload/photo:
+    post:
+      consumes:
+      - application/json
+      description: Upload Photo Profil Sales
+      operationId: Upload Photo Profil Sales
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UploadPhotoProfilSalesReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Upload Photo Profil Sales Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Upload Photo Profil Sales
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/todolist/count:
+    get:
+      consumes:
+      - application/json
+      description: Todolist Count
+      operationId: Todolist Count
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Count Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist Count
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/todolist/filter/village:
+    post:
+      consumes:
+      - application/json
+      description: Todolist FilterVillageList
+      operationId: Todolist FilterVillageList
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistFilterVillageListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist FilterVillageList Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist FilterVillageList
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/todolist/post:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Post
+      operationId: Todolist Post v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Post Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist Post
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/todolist/taskbysubcategory:
+    post:
+      consumes:
+      - application/json
+      description: Todolist TaskBySubCategory
+      operationId: Todolist TaskBySubCategory
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistTaskBySubCategoryReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist TaskBySubCategory Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist TaskBySubCategory
+      tags:
+      - OTTO SFA
+  /v2.2/sfa/user_category:
+    get:
+      consumes:
+      - application/json
+      description: User Category
+      operationId: User Category v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: User Category Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.UserCategoryRes'
+                  type: array
+              type: object
+      summary: User Category
+      tags:
+      - OTTO SFA
+  /v2.2/toko-ottopay/merchant/detail:
+    post:
+      consumes:
+      - application/json
+      description: Merchant Detail Toko Ottopay
+      operationId: Merchant List Toko Ottopay v2.2
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantDetailQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant Detail QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.MerchantDetailQRISRes'
+              type: object
+      summary: Merchant Detail Toko Ottopay
+      tags:
+      - OTTO SFA
+  /v2.2/village/:district_id:
+    get:
+      consumes:
+      - application/json
+      description: Village
+      operationId: Village
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Village Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Village'
+              type: object
+      summary: Village
+      tags:
+      - OTTO SFA
+  /v2.3/merchants/business_category/list:
+    get:
+      consumes:
+      - application/json
+      description: BusinessCategory List
+      operationId: BusinessCategory List
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Profile Sales Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanListRes'
+              type: object
+      summary: BusinessCategory List
+      tags:
+      - OTTO SFA
+  /v2.3/merchants/business_type/list:
+    get:
+      consumes:
+      - application/json
+      description: Business Type List
+      operationId: Business Type List v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Business Type List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.BusinessTypeListRes'
+              type: object
+      summary: Business Type List
+      tags:
+      - OTTO SFA
+    post:
+      consumes:
+      - application/json
+      description: Business Type List  By SR
+      operationId: Business Type List  By SR
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.BusinessTypeListBySRReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Business Type List By SR Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.BusinessTypeListRes'
+              type: object
+      summary: Business Type List  By SR
+      tags:
+      - OTTO SFA
+  /v2.3/merchants/check_idcard:
+    post:
+      consumes:
+      - application/json
+      description: Check IDCard
+      operationId: Check IDCard v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckIdCardReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Check IDCard Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Check IDCard
+      tags:
+      - OTTO SFA
+  /v2.3/sfa-idm/todolist/detail:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Detail
+      operationId: Todolist Detail IDM
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Detail Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ChangePhotoPinKTPRes'
+              type: object
+      summary: Todolist Detail
+      tags:
+      - OTTO SFA-IDM
+  /v2.3/sfa-idm/todolist/list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist List
+      operationId: Todolist List IDM
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.TodolistListReq'
+              type: object
+      summary: Todolist List
+      tags:
+      - SFA-IDM
+  /v2.3/sfa/attendance/post:
+    post:
+      consumes:
+      - application/json
+      description: Attendance Post
+      operationId: Attendance Post v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.AttendancePostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Post Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ChangePhotoPinKTPRes'
+              type: object
+      summary: Attendance Post
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Login
+      operationId: Login v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Login Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.LoginV23Res'
+              type: object
+      summary: Login
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/action/detail:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Detail
+      operationId: CallPlan Action Detail
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Detail Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/dbmodels.CallPlanActions'
+              type: object
+      summary: CallPlan Action Detail
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/action/merchant_unknown:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Merchant Unknown
+      operationId: CallPlan Action Merchant Unknown v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionMerchantUnknownReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Merchant Unknown Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Action Merchant Unknown
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/action/save:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Save
+      operationId: CallPlan Action Save v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionScanQRReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Save Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.CallPlanActions'
+                  type: array
+              type: object
+      summary: CallPlan Action Save
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/action/scan_qr:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Scan QR
+      operationId: CallPlan Action Scan QR
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionScanQRReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Scan QR Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CheckQRISRes'
+              type: object
+      summary: CallPlan Action Scan QR
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/action/submit:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Submit
+      operationId: CallPlan Action Submit v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionSubmitReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Submit Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: CallPlan Action Submit
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan List
+      operationId: CallPlan List v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Profile Sales Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanListRes'
+              type: object
+      summary: CallPlan List
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/merchant/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Merchant List
+      operationId: CallPlan Merchant List v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanMerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanMerchantListRes'
+              type: object
+      summary: CallPlan Merchant List
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/todolist/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Todolist List
+      operationId: CallPlan Todo List v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanTodolistListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Todolist List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanTodolistListRes'
+              type: object
+      summary: CallPlan Todolist List
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/visit/check_merchant_phone:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Visit Check Merchant Phone
+      operationId: CallPlan Visit Check Merchant Phone
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanVisitCheckMerchantPhoneReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Visit Check Merchant Phone Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanVisitMerchantRes'
+              type: object
+      summary: CallPlan Visit Check Merchant Phone
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/call_plan/visit/check_qris:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Visit Check QRIS
+      operationId: CallPlan Visit Check QRIS
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CheckQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Visit Check QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanVisitMerchantRes'
+              type: object
+      summary: CallPlan Visit Check QRIS
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/todolist/detail:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Detail
+      operationId: Todolist Detail v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Detail Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ChangePhotoPinKTPRes'
+              type: object
+      summary: Todolist Detail
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/todolist/list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist List
+      operationId: Todolist List v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.TodolistListReq'
+              type: object
+      summary: Todolist List
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/todolist/merchant_not_found/list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Merchant Not Found List
+      operationId: Todolist Merchant Not Found List v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistMerchantNotFoundListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Merchant Not Found List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.TodolistMerchantNotFoundListRes'
+                  type: array
+              type: object
+      summary: Todolist Merchant Not Found List
+      tags:
+      - OTTO SFA
+  /v2.3/sfa/todolist/post:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Post
+      operationId: Todolist Post v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostV23Req'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Post Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist Post
+      tags:
+      - OTTO SFA
+  /v2.3/toko-ottopay/merchant/detail:
+    post:
+      consumes:
+      - application/json
+      description: Merchant Detail Toko Ottopay
+      operationId: Merchant List Toko Ottopay v2.3
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantDetailQRISReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant Detail QRIS Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.MerchantDetailTokoOttopayV23Res'
+              type: object
+      summary: Merchant Detail Toko Ottopay
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Login
+      operationId: Login v2.4
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Login Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.LoginV23Res'
+              type: object
+      summary: Login
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/call_plan/action/save:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Action Save
+      operationId: CallPlan Action Save
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanActionScanQRReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Action Save Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.CallPlanActions'
+                  type: array
+              type: object
+      summary: CallPlan Action Save
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/call_plan/merchant/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Merchant List
+      operationId: CallPlan Merchant List v2.4
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanMerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanMerchantListResV24'
+              type: object
+      summary: CallPlan Merchant List
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/todolist/detail:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Detail
+      operationId: Todolist Detail v2.4
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Detail Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ChangePhotoPinKTPRes'
+              type: object
+      summary: Todolist Detail
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/todolist/list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist List
+      operationId: Todolist List v2.4
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.TodolistListReq'
+              type: object
+      summary: Todolist List
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/todolist/merchant_not_found/list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Merchant Not Found List
+      operationId: Todolist Merchant Not Found List v2.4
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistMerchantNotFoundListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Merchant Not Found List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.TodolistMerchantNotFoundListRes'
+                  type: array
+              type: object
+      summary: Todolist Merchant Not Found List
+      tags:
+      - OTTO SFA
+  /v2.4/sfa/todolist/post:
+    post:
+      consumes:
+      - application/json
+      description: Todolist Post
+      operationId: Todolist Post v2.4
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostV23Req'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist Post Response EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist Post
+      tags:
+      - OTTO SFA
+  /v2.5/indomarco/merchant/update:
+    post:
+      consumes:
+      - application/json
+      description: UpdateMerchantIndomarco Update
+      operationId: UpdateMerchantIndomarco Update
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateMerchantIndomarcoReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: UpdateMerchantIndomarcoReq Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Response'
+              type: object
+      summary: UpdateMerchantIndomarco Update
+      tags:
+      - OTTO SFA-IDM
+  /v2.5/sfa/acquisition/list:
+    post:
+      consumes:
+      - application/json
+      description: AcquisitionList List
+      operationId: AcquisitionList List v2.5
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.GetAcquisitionBySalesTypeID'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: AcquisitionList List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/dbmodels.Acquisitions'
+              type: object
+      summary: AcquisitionList List
+      tags:
+      - OTTO SFA
+  /v2.5/sfa/business_type/list:
+    post:
+      consumes:
+      - application/json
+      description: BusinessTypeList List
+      operationId: BusinessTypeList List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.GetAcquisitionByName'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: BusinessTypeList List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/dbmodels.MerchantBusinessTypes'
+              type: object
+      summary: BusinessTypeList List
+      tags:
+      - OTTO SFA
+  /v2.5/sfa/call_plan/merchant/list:
+    post:
+      consumes:
+      - application/json
+      description: CallPlan Merchant List
+      operationId: CallPlan Merchant List v2.5
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CallPlanMerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: CallPlan Merchant List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CallPlanMerchantListResV24'
+              type: object
+      summary: CallPlan Merchant List
+      tags:
+      - OTTO SFA
+  /v2.5/sfa/todolist/list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist List
+      operationId: Todolist List
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.TodolistPostReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.TodolistListReq'
+              type: object
+      summary: Todolist List
+      tags:
+      - OTTO SFA
+  /v2.6/indomarco/merchant/update:
+    post:
+      consumes:
+      - application/json
+      description: UpdateMerchantIndomarco Update
+      operationId: UpdateMerchantIndomarco Update V2.6
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateMerchantIndomarcoReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: UpdateMerchantIndomarcoReq Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Response'
+              type: object
+      summary: UpdateMerchantIndomarco Update
+      tags:
+      - OTTO SFA-IDM
+  /v2.6/sfa/acquisition/list:
+    post:
+      consumes:
+      - application/json
+      description: AcquisitionList List
+      operationId: AcquisitionList List v2.6
+      parameters:
+      - description: Bearer <token>
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.GetAcquisitionBySalesTypeID'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: AcquisitionList List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/dbmodels.Acquisitions'
+              type: object
+      summary: AcquisitionList List
+      tags:
+      - OTTO SFA
+swagger: "2.0"

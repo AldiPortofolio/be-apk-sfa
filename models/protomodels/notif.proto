@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package protomodels;
+
+import "google/protobuf/Empty.proto";
+
+service Notifs {
+    rpc SendNotif(NotifRequest) returns (google.protobuf.Empty) {}
+}
+
+message NotifRequest {
+    string issuerId = 1;
+    string firebaseToken = 2;
+    string typeMessage = 3;
+    bytes data = 4;
+}

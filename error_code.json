@@ -1,0 +1,388 @@
+[
+  {
+    "key": "default",
+    "content": {
+      "code": 400,
+      "message": "Terjadi kesalahan pada server."
+    }
+  },
+  {
+    "key": "pending",
+    "content": {
+      "code": 202,
+      "message": "Dalam proses."
+    }
+  },
+  {
+    "key": "failed",
+    "content": {
+      "code": 400,
+      "message": "Gagal."
+    }
+  },
+  {
+    "key": "session.expired",
+    "content": {
+      "code": 498,
+      "message": "Session aplikasi Anda telah berakhir."
+    }
+  },
+  {
+    "key": "host.error",
+    "content": {
+      "code": 400,
+      "message": "Terjadi kesalahan pada server. Silahkan hubungi WA 08111678864."
+    }
+  },
+  {
+    "key": "qr.unknown",
+    "content": {
+      "status": true,
+      "code": 201,
+      "message": "QR tidak di kenal, silahkan pastikan kembali QR yang anda scan."
+    }
+  },
+  {
+    "key": "qr.exist",
+    "content": {
+      "status": true,
+      "code": 201,
+      "message": "QRIS merchant telah terdaftar, silahkan menggunakan QRIS yang lain."
+    }
+  },
+  {
+    "key": "qr.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Berhasil Scan QRIS."
+    }
+  },
+  {
+    "key": "merchant.not.found",
+    "content": {
+      "status": true,
+      "code": 422,
+      "message": "Data Merchant tidak ditemukan."
+    }
+  },
+  {
+    "key": "callplan.not.found",
+    "content": {
+      "code": 400,
+      "message": "Anda tidak memiliki jadwal Call Plan."
+    }
+  },
+  {
+    "key": "fds.error",
+    "content": {
+      "code": 422,
+      "message": "Internal Server Error - 01"
+    }
+  },
+  {
+    "key": "qr.not.match",
+    "content": {
+      "status": true,
+      "code": 201,
+      "message": "QR Merchant tidak sesuai."
+    }
+  },
+  {
+    "key": "merchant.phone.not.match",
+    "content": {
+      "status": true,
+      "code": 201,
+      "message": "No Hp Merchant tidak sesuai."
+    }
+  },
+  {
+    "key": "photo.location.merchant.send.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Foto lokasi merchant berhasil dikirim."
+    }
+  },
+  {
+    "key": "call.plan.submit.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Action List berhasil dikirim."
+    }
+  },
+  {
+    "key": "todolist.merchant.not.found",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Kendala telah berhasil dikirim."
+    }
+  },
+  {
+    "key": "action.call.plan.incompleted",
+    "content": {
+      "status": false,
+      "code": 400,
+      "message": "Anda Belum Menjalankan Action Call Plan."
+    }
+  },
+  {
+    "key": "id.number.not.found",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "Id Pelanggan tidak terdaftar."
+    }
+  },
+  {
+    "key": "wrong.pin",
+    "content": {
+      "status": false,
+      "code": 401,
+      "message": "PIN Salah."
+    }
+  },
+  {
+    "key": "update.apps",
+    "content": {
+      "status": false,
+      "code": 400,
+      "message": "Mohon update aplikasi anda."
+    }
+  },
+  {
+    "key": "id.sales.not.found",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "Sales ID tidak terdaftar."
+    }
+  },
+  {
+    "key": "success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "success"
+    }
+  },
+  {
+    "key": "phone.number.not.found",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "Phone Number tidak ditemukan."
+    }
+  },
+  {
+    "key": "send.push.notif.failed",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "Gagal kirim push notif."
+    }
+  },
+  {
+    "key": "success.change.pin.idcard",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Permintaan anda akan segera diproses, dan dikonfirmasi melalui email."
+    }
+  },
+  {
+    "key": "failed.upload.image",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Gagal upload image."
+    }
+  },
+  {
+    "key": "todolist.failed.update.db",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Failed post to DB when post Todolist."
+    }
+  },
+  {
+    "key": "todolist.failed.update.status.db",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Failed post to DB when post Todolist."
+    }
+  },
+  {
+    "key": "todolist.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "To-do List telah berhasil dikirim."
+    }
+  },
+  {
+    "key": "attendande.failed.update.db",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Failed post to DB when submit Attendance."
+    }
+  },
+  {
+    "key": "change.status.merchant.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Merchant has been successfully Updated."
+    }
+  },
+  {
+    "key": "todolist.data.not.found",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Data Todo List Tidak Tersedia."
+    }
+  },
+  {
+    "key": "todolist.detail.not.found.new.rec",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "ID Pelanggan/Nomor HP merchant tidak sesuai."
+    }
+  },
+  {
+    "key": "todolist.detail.not.found",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Nomor HP merchant tidak sesuai."
+    }
+  },
+  {
+    "key": "todolist.acquitision.failed",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Proses akuisisi gagal. Silahkan mencoba kembali."
+    }
+  },
+  {
+    "key": "no.handphone.not.found",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "No. HP tidak terdaftar."
+    }
+  },
+  {
+    "key": "qris.merchant.not.found.db",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "No Hp Merchant tidak ditemukan."
+    }
+  },
+  {
+    "key": "qris.merchant.not.found.rose",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Merchant belum dapat melakukan update QR, pastikan merchant telah melakukan activasi akun OttoPay, untuk informasi lebih lanjut merchant dapat menghubungi customer service OttoPay."
+    }
+  },
+  {
+    "key": "scan.qr.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Scan QR berhasil."
+    }
+  },
+  {
+    "key": "qris.merchant.update.rose.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "Berhasil Update QR merchant dengan, Store Name Preprinted : "
+    }
+  },
+  {
+    "key": "todolist.village.list.not.found",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Data Todo List Village Tidak Tersedia."
+    }
+  },
+  {
+    "key": "idcard_exceeded",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Mohon Maaf Nomor KTP telah melebihi batasan yang ditentukan."
+    }
+  },
+  {
+    "key": "businesstype.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "ok"
+    }
+  },
+  {
+    "key": "businesstype.data.not.found",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "Business Type tidak ditemukan."
+    }
+  },
+  {
+    "key": "acquistion.data.not.found",
+    "content": {
+      "status": false,
+      "code": 404,
+      "message": "Acquisition tidak ditemukan."
+    }
+  },
+  {
+    "key": "update.merchant.success",
+    "content": {
+      "status": true,
+      "code": 200,
+      "message": "ok"
+    }
+  },
+  {
+    "key": "customer.code.not.valid",
+    "content": {
+      "status": false,
+      "code": 400,
+      "message": "Merchant anda tidak terdaftar di Indomarco"
+    }
+  },
+  {
+    "key": "task.todolist.not.found",
+    "content": {
+      "status": false,
+      "code": 422,
+      "message": "Data Detail Todo List Tidak Tersedia."
+    }
+  },
+  {
+    "key": "wrong.phone.number",
+    "content": {
+      "status": false,
+      "code": 401,
+      "message": "Phone Number Salah."
+    }
+  }
+]
+

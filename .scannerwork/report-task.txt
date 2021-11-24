@@ -1,0 +1,6 @@
+projectKey=ottosfa-api-apk
+serverUrl=http://34.101.147.203:9011
+serverVersion=9.0.1.46107
+dashboardUrl=http://34.101.147.203:9011/dashboard?id=ottosfa-api-apk
+ceTaskId=AXzlLc-sz-52B0plpiwb
+ceTaskUrl=http://34.101.147.203:9011/api/ce/task?id=AXzlLc-sz-52B0plpiwb
